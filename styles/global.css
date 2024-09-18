@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap'); 
+
+
+:root {
+    --color-bg-primary: #183059;
+    --color-text-primary: #F6F4F3;
+    --color-primary-main: #276FBF;
+    --color-secondary-main: #AF5B5B;
+    --color-secondary-light: #F03A47;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik Mono One", monospace;
+    background-color: var(--color-bg-primary);
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+}
+
+span:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+}
