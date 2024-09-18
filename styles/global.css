@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap'); 
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 :root {
     --color-bg-primary: #183059;
     --color-text-primary: #F6F4F3;
+    --color-text-secondary: #120506;
     --color-primary-main: #276FBF;
     --color-secondary-main: #AF5B5B;
     --color-secondary-light: #F03A47;
@@ -15,6 +15,7 @@ body {
     box-sizing: border-box;
     font-family: "Rubik Mono One", monospace;
     background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
 }
 
 button {
