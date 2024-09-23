@@ -58,6 +58,8 @@ function startGame(choice) {
     updateScores();
     if (game.isGameOver()) {
         showModal();
+    } else {
+        showResultNotification(result);
     }
     return result;
 }
@@ -78,6 +80,32 @@ function showModal() {
     document.getElementsByClassName('backdrop')[0].style.display = 'block';
     document.getElementsByClassName('winner')[0].innerHTML = game.getWinner();
     disableButtons();
+}
+
+function showResultNotification(result) {
+    const notificationContainer = document.querySelector('.notification-container');
+    const existingNotification = document.querySelector('.result-notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    const notification = document.createElement('div');
+    notification.classList.add('result-notification');
+    const resultText = document.createElement('p');
+    resultText.classList.add('round-result');
+    resultText.innerHTML = `${result}`;
+    notification.appendChild(resultText);
+    notificationContainer.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 500);
+    }, 3000);
 }
 
 function hideModal() {
